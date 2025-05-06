@@ -25,7 +25,16 @@ func main() {
 		SubmitText: "登录",
 	}
 
+	createBtn := widget.NewButton("新建账号", func() {
+
+	})
+	forgetBtn := widget.NewButton("忘记密码", func() {
+
+	})
+	btnContainer := container.NewHBox(createBtn, forgetBtn)
+
 	w.SetContent(container.NewVBox(
+		btnContainer,
 		form,
 	))
 	w.Resize(fyne.NewSize(340, 200))
